@@ -14,18 +14,30 @@ import Domain.Pelicula;
 import GUI.VentanaPrincipal;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+<<<<<<< HEAD
+=======
+import javafx.stage.FileChooser;
+>>>>>>> 42499db2502dbfe21a70a8c188c71c78133e4a0d
 /**
  *
  * @author catherine
  */
 public class Importar {
     
+<<<<<<< HEAD
         
     
     public static void main(String[] args) throws IOException {
             List<Pelicula> pelicula = new ArrayList<Pelicula>();
             VentanaPrincipal ventana= new VentanaPrincipal();
             CsvReader peliculas_import = new CsvReader(ventana.getRute());
+=======
+    
+    public static void main(String[] args) throws IOException {
+            List<Pelicula> pelicula = new ArrayList<Pelicula>();
+            VentanaPrincipal ventana=new VentanaPrincipal();
+            CsvReader peliculas_import = new CsvReader("datos.csv");
+>>>>>>> 42499db2502dbfe21a70a8c188c71c78133e4a0d
             peliculas_import.readHeaders();
             
             while (peliculas_import.readRecord()) {

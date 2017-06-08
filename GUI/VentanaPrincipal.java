@@ -7,6 +7,7 @@ package GUI;
 
 import java.awt.Color;
 import java.awt.Font;
+<<<<<<< HEAD
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.PopupMenu;
@@ -14,6 +15,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.ImageObserver;
 import java.awt.image.ImageProducer;
+=======
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+>>>>>>> 42499db2502dbfe21a70a8c188c71c78133e4a0d
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -33,6 +40,10 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 42499db2502dbfe21a70a8c188c71c78133e4a0d
 /**
  *
  * @author catherine
@@ -45,19 +56,40 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
     private JMenuItem jMIComedy, jMIRomance, jMIFiction, jMIChildish, jMIAction, jMIDrama;
     private JFileChooser chooser;
     private JButton jbtnOPenFile;
+<<<<<<< HEAD
     private String rute;
     private ImageIcon Image;
     
     
     public VentanaPrincipal() {    
         super("Registro de Película según Género");//llama a JFrame
+=======
+    private  String rute;
+    private  String information;
+    private BufferedImage image;
+
+    public String getRute() {
+        return rute;
+    }
+    
+    public VentanaPrincipal() {    
+        super("Registro de Película según Género");//llama a JFrame
+        try {
+            this.image=ImageIO.read(getClass().getResourceAsStream("/assets/fondo.png"));
+        } catch (IOException ex) {
+            Logger.getLogger(VentanaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+>>>>>>> 42499db2502dbfe21a70a8c188c71c78133e4a0d
         init();
         
     }//fin constructor por defecto
     
      private void init() {
+<<<<<<< HEAD
           
              
+=======
+>>>>>>> 42499db2502dbfe21a70a8c188c71c78133e4a0d
         this.jMenuBar = new JMenuBar();
         this.add(this.jMenuBar);
         
@@ -98,21 +130,34 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 //       new ImageIcon((Image) ImageIO.read(getClass().getResourceAsStream("/assets/fondo.png")));
         this.setJMenuBar(jMenuBar);
         
+<<<<<<< HEAD
             
            
+=======
+>>>>>>> 42499db2502dbfe21a70a8c188c71c78133e4a0d
         this.setSize(800, 600);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
     }//fin init
      
      public String openFile() throws IOException {
+<<<<<<< HEAD
         String information = "";
         chooser = new JFileChooser();
+=======
+        
+        chooser = new JFileChooser();
+        
+>>>>>>> 42499db2502dbfe21a70a8c188c71c78133e4a0d
         if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
             FileReader fileReader = null;
             try {
                 rute = chooser.getSelectedFile().getAbsolutePath();
+<<<<<<< HEAD
                 FileNameExtensionFilter extensionFilter = new FileNameExtensionFilter("*.CSV", "*.csv");
+=======
+//                FileNameExtensionFilter extensionFilter = new FileNameExtensionFilter("CSV", "csv");
+>>>>>>> 42499db2502dbfe21a70a8c188c71c78133e4a0d
                 File file = new File(rute);
 
                 fileReader = new FileReader(file);
@@ -133,7 +178,11 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
         return information;
     }//openFIle
 
+<<<<<<< HEAD
     public String getRute() throws IOException {
+=======
+    public String openRute() throws IOException {
+>>>>>>> 42499db2502dbfe21a70a8c188c71c78133e4a0d
 
         chooser = new JFileChooser();
         String rute = "";
