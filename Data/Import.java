@@ -10,34 +10,27 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import com.csvreader.CsvReader;
-import Domain.Pelicula;
-import GUI.VentanaPrincipal;
+import Domain.Movie;
+import GUI.PrincipalWindow;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-<<<<<<< HEAD
-=======
-import javafx.stage.FileChooser;
->>>>>>> 42499db2502dbfe21a70a8c188c71c78133e4a0d
+
+
+
 /**
  *
  * @author catherine
  */
-public class Importar {
+public class Import  {
     
-<<<<<<< HEAD
+
         
     
     public static void main(String[] args) throws IOException {
-            List<Pelicula> pelicula = new ArrayList<Pelicula>();
-            VentanaPrincipal ventana= new VentanaPrincipal();
-            CsvReader peliculas_import = new CsvReader(ventana.getRute());
-=======
-    
-    public static void main(String[] args) throws IOException {
-            List<Pelicula> pelicula = new ArrayList<Pelicula>();
-            VentanaPrincipal ventana=new VentanaPrincipal();
+            List<Movie> pelicula = new ArrayList<Movie>();
+            
             CsvReader peliculas_import = new CsvReader("datos.csv");
->>>>>>> 42499db2502dbfe21a70a8c188c71c78133e4a0d
+          
             peliculas_import.readHeaders();
             
             while (peliculas_import.readRecord()) {
@@ -49,13 +42,13 @@ public class Importar {
                     String subtitled = peliculas_import.get(4);
                     String premier = peliculas_import.get(5);
                     
-                    pelicula.add(new Pelicula(code,title,gender,total,subtitled,premier));
+                    pelicula.add(new Movie(code,title,gender,total,subtitled,premier));
                 } catch (IOException ex) {
-                    Logger.getLogger(Importar.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(Import.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
             peliculas_import.close();
-            for(Pelicula peli : pelicula){
+            for(Movie peli : pelicula){
                 System.out.println(peli.getCode() + " - " + peli.getTitle() + " - " + peli.getGender()+" - "+ peli.getTotal() + " - " + peli.getSubtitled() + " - " + peli.getPremier() );
             }
     }    

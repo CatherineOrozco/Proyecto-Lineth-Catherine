@@ -17,23 +17,23 @@ import javax.swing.JTextField;
  *
  * @author catherine
  */
-public class VentanaComedy extends JInternalFrame implements ActionListener{
-    private JButton jbtnAceptarComedy;
+public class RomanceWindow extends JInternalFrame implements ActionListener{
+    private JButton jbtnAceptarRomance;
     private JLabel jlbCode;
     private JLabel jlbTitle;
     private JLabel jlbGender;
     private JLabel jlbTotal;
     private JLabel jlbSubtitled;
     private JLabel jlbPremier;
-    private JTextField jtfCodeComedy;
-    private JTextField jtfTitleComedy;
-    private JTextField jtfGenderComedy;
-    private JTextField jtfTotalComedy;
-    private JTextField jtfSubtitledComedy;
-     private JTextField jtfPremierComedy;
+    private JTextField jtfCodeRomance;
+    private JTextField jtfTitleRomance;
+    private JTextField jtfGenderRomance;
+    private JTextField jtfTotalRomance;
+    private JTextField jtfSubtitledRomance;
+     private JTextField jtfPremierRomance;
     
-    VentanaComedy(){
-      super("Género de Comedia");
+    RomanceWindow(){
+      super("Género Romántico");
         this.setSize(400, 100);
         this.setResizable(false);
         this.setClosable(true);
@@ -46,45 +46,45 @@ public class VentanaComedy extends JInternalFrame implements ActionListener{
     private void init(){
         //JLABEL y JTEXTFIELD
         this.jlbCode = new JLabel("Código de Película: ");
-        this.jtfCodeComedy = new JTextField(10);
+        this.jtfCodeRomance = new JTextField(10);
         this.add(this.jlbCode);
-        this.add(this.jtfCodeComedy);
+        this.add(this.jtfCodeRomance);
         
         this.jlbTitle = new JLabel("Nombre de Pelicula: ");
-        this.jtfTitleComedy = new JTextField(10);
+        this.jtfTitleRomance = new JTextField(10);
         this.add(this.jlbTitle);
-        this.add(this.jtfTitleComedy);
+        this.add(this.jtfTitleRomance);
         
         this.jlbGender = new JLabel("Género de Película: ");
-        this.jtfGenderComedy = new JTextField(10);
+        this.jtfGenderRomance = new JTextField(10);
         this.add(this.jlbGender);
-        this.add(this.jtfGenderComedy);
+        this.add(this.jtfGenderRomance);
         
         this.jlbTotal = new JLabel("Puntuación: ");
-        this.jtfTotalComedy = new JTextField(10);
+        this.jtfTotalRomance = new JTextField(10);
         this.add(this.jlbTotal);
-        this.add(this.jtfTotalComedy);
+        this.add(this.jtfTotalRomance);
         
         this.jlbSubtitled = new JLabel("Subtitulos: ");
-        this.jtfSubtitledComedy = new JTextField(10);
+        this.jtfSubtitledRomance = new JTextField(10);
         this.add(this.jlbSubtitled);
-        this.add(this.jtfSubtitledComedy);
+        this.add(this.jtfSubtitledRomance);
         
         this.jlbPremier = new JLabel("Premier: ");
-        this.jtfPremierComedy = new JTextField(10);
+        this.jtfPremierRomance = new JTextField(10);
         this.add(this.jlbPremier);
-        this.add(this.jtfPremierComedy);
+        this.add(this.jtfPremierRomance);
 
         //JBUTTON
-        this.jbtnAceptarComedy = new JButton("Registrar película");
-        this.jbtnAceptarComedy.addActionListener(this);
-        this.add(this.jbtnAceptarComedy);
+        this.jbtnAceptarRomance = new JButton("Registrar película");
+        this.jbtnAceptarRomance.addActionListener(this);
+        this.add(this.jbtnAceptarRomance);
         
     }//fin init
 
     @Override
     public void actionPerformed(ActionEvent e) {
-         if(e.getSource()==this.jbtnAceptarComedy){
+         if(e.getSource()==this.jbtnAceptarRomance){
 //             try {
 //                 GeneroBusiness generoBusiness=new GeneroBusiness();
 //                 String genero=this.jtfId.getText();

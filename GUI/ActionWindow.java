@@ -8,32 +8,37 @@ package GUI;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.ERROR_MESSAGE;
 import javax.swing.JTextField;
 
 /**
  *
  * @author catherine
  */
-public class VentanaChildish extends JInternalFrame implements ActionListener{
-    private JButton jbtnAceptarChild;
-     private JLabel jlbCode;
+public class ActionWindow extends JInternalFrame implements ActionListener{
+    private JButton jbtnAceptar;
+    private JLabel jlbCode;
     private JLabel jlbTitle;
     private JLabel jlbGender;
     private JLabel jlbTotal;
     private JLabel jlbSubtitled;
      private JLabel jlbPremier;
-    private JTextField jtfCodeChildish;
-    private JTextField jtfTitleChildish;
-    private JTextField jtfGenderChildish;
-    private JTextField jtfTotalChildish;
-    private JTextField jtfSubtitledChildish;
-     private JTextField jtfPremierChildish;
+    private JTextField jtfCodeAction;
+    private JTextField jtfTitleAction;
+    private JTextField jtfGenderAction;
+    private JTextField jtfTotalAction;
+    private JTextField jtfSubtitledAction;
+     private JTextField jtfPremierAction;
     
-    VentanaChildish(){
-      super("Género para niños");
+    ActionWindow(){
+      super("Género Acción");
         this.setSize(400, 100);
         this.setResizable(false);
         this.setClosable(true);
@@ -46,45 +51,45 @@ public class VentanaChildish extends JInternalFrame implements ActionListener{
     private void init(){
         //JLABEL y JTEXTFIELD
         this.jlbCode = new JLabel("Código de Película: ");
-        this.jtfCodeChildish = new JTextField(10);
+        this.jtfCodeAction = new JTextField(10);
         this.add(this.jlbCode);
-        this.add(this.jtfCodeChildish);
+        this.add(this.jtfCodeAction);
         
         this.jlbTitle = new JLabel("Nombre de Pelicula: ");
-        this.jtfTitleChildish = new JTextField(10);
+        this.jtfTitleAction = new JTextField(10);
         this.add(this.jlbTitle);
-        this.add(this.jtfTitleChildish);
+        this.add(this.jtfTitleAction);
         
         this.jlbGender = new JLabel("Género de Película: ");
-        this.jtfGenderChildish = new JTextField(10);
+        this.jtfGenderAction = new JTextField(10);
         this.add(this.jlbGender);
-        this.add(this.jtfGenderChildish);
+        this.add(this.jtfGenderAction);
         
         this.jlbTotal = new JLabel("Puntuación: ");
-        this.jtfTotalChildish = new JTextField(10);
+        this.jtfTotalAction = new JTextField(10);
         this.add(this.jlbTotal);
-        this.add(this.jtfTotalChildish);
+        this.add(this.jtfTotalAction);
         
         this.jlbSubtitled = new JLabel("Subtitulos: ");
-        this.jtfSubtitledChildish = new JTextField(10);
+        this.jtfSubtitledAction = new JTextField(10);
         this.add(this.jlbSubtitled);
-        this.add(this.jtfSubtitledChildish);
+        this.add(this.jtfSubtitledAction);
         
         this.jlbPremier = new JLabel("Premier: ");
-        this.jtfPremierChildish = new JTextField(10);
+        this.jtfPremierAction = new JTextField(10);
         this.add(this.jlbPremier);
-        this.add(this.jtfPremierChildish);
+        this.add(this.jtfPremierAction);
 
         //JBUTTON
-        this.jbtnAceptarChild = new JButton("Registrar película");
-        this.jbtnAceptarChild.addActionListener(this);
-        this.add(this.jbtnAceptarChild);
+        this.jbtnAceptar = new JButton("Registrar película");
+        this.jbtnAceptar.addActionListener(this);
+        this.add(this.jbtnAceptar);
         
     }//fin init
 
     @Override
     public void actionPerformed(ActionEvent e) {
-         if(e.getSource()==this.jbtnAceptarChild){
+         if(e.getSource()==this.jbtnAceptar){
 //             try {
 //                 GeneroBusiness generoBusiness=new GeneroBusiness();
 //                 String genero=this.jtfId.getText();

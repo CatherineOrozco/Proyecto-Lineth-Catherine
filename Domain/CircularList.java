@@ -9,20 +9,20 @@ package Domain;
  *
  * @author lineth
  */
-public class ListaCircular {
+public class CircularList {
     
     
-    public Nodo head, tail;
+    public Node head, tail;
     private int size;
 
-    public ListaCircular() {
+    public CircularList() {
         this.head = null;
         this.tail = null;
         this.size = 0;
     }//const
     
     public void insertIntoTail(String name){
-        Nodo newNode = new Nodo(name);
+        Node newNode = new Node(name);
         
         //preguntas
         if(this.tail == null){//lista vacía
@@ -37,7 +37,7 @@ public class ListaCircular {
     }//end method
     
     public void insertIntoHead(String name){
-        Nodo newNode = new Nodo(name);
+        Node newNode = new Node(name);
         
         //preguntas
         if(this.head == null){//lista vacía
@@ -53,7 +53,7 @@ public class ListaCircular {
     
     
     public boolean deleteToList(String name){
-        Nodo temp = this.head;
+        Node temp = this.head;
         
         while(temp != null && !name.equals(temp.name)){
             temp = temp.nextPtr;
@@ -89,7 +89,7 @@ public class ListaCircular {
     
    
     public void printList(){
-        Nodo temp = this.head;
+        Node temp = this.head;
         System.out.println("List size: " + this.size);
 //        System.err.print("");
         while(temp != null){

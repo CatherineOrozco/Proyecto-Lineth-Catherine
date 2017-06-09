@@ -5,10 +5,14 @@
  */
 package Data;
 
+import Domain.CircularList;
+
 /**
  *
  * @author catherine
  */
 public class DramaData {
+    
+    CircularList dramaList= new CircularList();
     
 }
